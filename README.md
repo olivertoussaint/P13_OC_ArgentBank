@@ -1,4 +1,8 @@
-# React + Vite
+# Vite + React
+<div style="text-align: center;">
+    <img src="./src/assets/logo_vite_react.png" alt="Vite and React logo" style="max-width: 100%; height: auto;">
+</div>
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
