@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-function User() {
+function Login() {
   return (
-    <div>User</div>
+    <div>Login</div>
   )
 }
 
-export default User
+export default Login
