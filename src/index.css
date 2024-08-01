@@ -2,6 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-.bg-p {
-    background-position: 0 33%;
+.heroContent {
+	background: #fff;
+	margin: 2rem;
+	padding: 2.5rem;
+	position: absolute;
+	right: 3.125rem;
+	text-align: left;
+	top: 3.125rem;
+	width: 22.75rem;
+}
+
+.subtitle {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.text {
+	font-size: 1.2rem;
+	margin-top: 1.1875rem;
+}
+
+.banner {
+	background-image: url(./src/assets/img/bank-tree.jpeg);
+	background-position: 0% 33%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 25rem;
+	position: relative;
+}
+
+.features {
+	display: flex;
+	margin-bottom: 0.625rem;
+	width: 100%;
+    min-height: 410px
+}
+
+.feature-item {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	margin: 0 auto;
+	padding: 2.5rem;
+	width: 33%;
+}
+
+.feature-item-icon {
+	border: 10px solid #00bc77;
+	border-radius: 50%;
+	padding: 1rem;
+	width: 9.375rem;
+}
+
+.feature-item-title {
+    color: #222;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+footer {
+	border-top: 2px solid #ccc;
+	display: flex;
+	justify-content: center;
+	padding: 2rem 0 1.5rem;
+}
+
+h2 {
+	display: block;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.input-wrapper {
+	font-weight: 700;
+}
+
+.sign-in-button {
+	background-color: #00bc77;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-top: 1rem;
+	padding: 0.5rem;
+	width: 100%;
+}
+
+.input-remember {
+	display: flex;
+	margin-left: 0.25rem;
+}
+
+.bg-bg-dark {
+	--tw-bg-opacity: 1;
+	background-color: rgb(18 0 43 / var(--tw-bg-opacity));
+	padding-bottom: 3rem;
+	padding-top: 3rem;
+}
+
+.input-remember label {
+	margin-left: 0.25rem;
+}
+
+.input-wrapper input {
+	font-size: 1.2rem;
+	padding: 0.3125rem;
+	border-color: rgb(118, 118, 118);
+	border-width: 0.5px;
+	width: 100%;
+}
+
+.error-message {
+	color: red;
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-top: 25px;
+	text-align: center;
 }

@@ -22,6 +22,10 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/assets/img')
       },
       {
+        find: '@banner',
+        replacement: path.resolve(__dirname, 'src/components/Banner.jsx')
+      },
+      {
         find: '@layout',
         replacement: path.resolve(__dirname, 'src/components/layout')
       },
