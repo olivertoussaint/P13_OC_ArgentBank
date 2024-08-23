@@ -3,13 +3,15 @@
     <img src="./src/assets/img/logo_vite_react.png" alt="Vite and React logo" style="max-width: 100%; height: auto;">
 </div>
 
-![Node.js Version](https://img.shields.io/badge/Node.js-14.0.0-green?logo=node.js&logoColor=white)
-![React Version](https://img.shields.io/badge/React-18.2.0-blue?logo=react&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4.4-38B2AC?logo=tailwind-css&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-5.0.1-764ABC?logo=redux&logoColor=white)
-![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?logo=githubactions&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?logo=open-source-initiative&logoColor=white)
-![Dependencies](https://img.shields.io/badge/Dependencies-Up%20to%20date-brightgreen?logo=npm&logoColor=white)
+![Node.js Version](https://img.shields.io/badge/Node.js-14.0.0-339933?logo=node.js)
+![React Version](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4.4-06B6D4?logo=tailwind-css)
+![Redux](https://img.shields.io/badge/Redux-5.0.1-764ABC?logo=redux)
+![MongoDB](https://img.shields.io/badge/MongoDB-4.4.6-47A248?logo=mongodb)
+![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?logo=githubactions)
+![License](https://img.shields.io/badge/License-MIT-yellow?logo=open-source-initiative)
+![Dependencies](https://img.shields.io/badge/Dependencies-Up%20to%20date-brightgreen?logo=npm)
+
 
 # Argent Bank
 <div align="center">
@@ -33,6 +35,7 @@
   - [Backend Setup](#backend-setup)
     - [Backend Prerequisites](#backend-prerequisites)
     - [Installation](#installation-1)
+  - [Populated Database](#populated-database)
   - [API Documentation](#api-documentation)
 
 ## Project Overview
@@ -125,6 +128,17 @@ or
 ```sh
 yarn install
 ```
+## Populated Database
+
+The database comes pre-populated with the following user accounts for testing purposes:
+
+| **Name**      | **Email**           | **Password**   |
+|---------------|---------------------|----------------|
+| Tony Stark    | tony@stark.com       | password123    |
+| Steve Rogers  | steve@rogers.com     | password456    |
+
+Use these credentials to log in and explore the application features.
+
 
 ## API Documentation
 
