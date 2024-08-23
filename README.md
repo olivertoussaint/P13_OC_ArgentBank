@@ -134,8 +134,8 @@ The database comes pre-populated with the following user accounts for testing pu
 
 | **Name**      | **Email**           | **Password**   |
 |---------------|---------------------|----------------|
-| Tony Stark    | tony@stark.com       | password123    |
-| Steve Rogers  | steve@rogers.com     | password456    |
+| `Tony Stark`   | `tony@stark.com`       | `password123`    |
+| `Steve Rogers` | `steve@rogers.com `    | `password456`    |
 
 Use these credentials to log in and explore the application features.
 
