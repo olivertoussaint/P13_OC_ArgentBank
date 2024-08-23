@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	h3 {
+		@apply text-lg;
+	  }
+}
+
 .heroContent {
 	background: #fff;
 	margin: 2rem;
@@ -75,11 +81,11 @@ h2 {
 	font-weight: bold;
 }
 
-.input-wrapper {
+.sign-in-content form .input-wrapper label{
 	font-weight: 700;
 }
 
-.sign-in-button {
+/* .sign-in-button {
 	background-color: #00bc77;
 	border: none;
 	color: #fff;
@@ -90,19 +96,19 @@ h2 {
 	margin-top: 1rem;
 	padding: 0.5rem;
 	width: 100%;
-}
+} */
 
 .input-remember {
 	display: flex;
 	margin-left: 0.25rem;
 }
 
-.bg-bg-dark {
+/* .bg-bg-dark {
 	--tw-bg-opacity: 1;
 	background-color: rgb(18 0 43 / var(--tw-bg-opacity));
 	padding-bottom: 3rem;
 	padding-top: 3rem;
-}
+} */
 
 .input-remember label {
 	margin-left: 0.25rem;
@@ -122,4 +128,62 @@ h2 {
 	font-weight: 700;
 	margin-top: 25px;
 	text-align: center;
+}
+
+.account {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    text-align: left;
+    width: 82%;
+}
+
+.edit-input {
+	align-items: center;
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.edit-input :disabled {
+    background-color: #c9c9c9;
+    color: #505050;
+}
+
+.edit-input input {
+	height: 25px;
+    padding-left: 3px;
+	color: #2c3e50;
+	width: 110px
+}
+
+.buttons {
+	display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.edit-username-button {
+	border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    padding: .625rem;
+    width: 120px;
+}
+
+.transaction-button {
+	border-radius: 10px;
+	display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding: .5rem;
+	width: 15rem;
+	cursor: auto;
 }

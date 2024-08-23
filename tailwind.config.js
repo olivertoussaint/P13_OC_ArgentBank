@@ -11,7 +11,9 @@ export default {
       },
       colors: {
         'regul-green': '#00bc77',
-        'login': '#2c3e50'
+        'login': '#2c3e50',
+        'white': '#ffffff',
+        'dark': 'rgb(18 0 43);',
       },
       minHeight: {
         '150': '820px'
@@ -27,8 +29,14 @@ export default {
       margin: {
         'auto': '0 auto',
       },
+      padding: {
+        '.625rem': '.625rem'
+      },
       fontSize: {
+        'base-1': '1rem',
         '1': '1.1rem',
+        '2': '2rem',
+        '2-5': '2.5rem'
       }
     },
   },

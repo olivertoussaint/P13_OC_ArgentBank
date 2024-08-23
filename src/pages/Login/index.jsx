@@ -5,7 +5,7 @@ import Form from '../../components/partials/Form'
 function Login() {
   return (
     <div className='signIn-page'>
-      <main className="bg-bg-dark min-h-150">
+      <main className="bg-dark min-h-150 py-12">
         <Form />
       </main>
     </div>

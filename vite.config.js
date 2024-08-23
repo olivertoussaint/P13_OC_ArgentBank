@@ -47,7 +47,7 @@ export default defineConfig({
       },
       {
         find: '@error',
-        replacement: path.resolve(__dirname, 'src/pages/Error/Error.jsx')
+        replacement: path.resolve(__dirname, 'src/pages/Error/index.jsx')
       }
     ]
   }
