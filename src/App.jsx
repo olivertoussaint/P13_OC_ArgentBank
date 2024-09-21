@@ -6,6 +6,7 @@ import Error from '@error'
 import './App.css'
 import Header from '@layout/Header'
 import Footer from '@layout/Footer'
+import PrivateRoute from './components/privateRoute'
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={<PrivateRoute element={<Profile />} />} 
+        />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
