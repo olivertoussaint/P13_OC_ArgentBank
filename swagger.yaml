@@ -1,8 +1,12 @@
 openapi: 3.0.0
 info:
-  title: Argent Bank Transaction API dodumentation
-  description: Contains API endpoints for transaction features
+  title: Argent Bank Transaction API Documentation
+  description: Contains API endpoints for user authentication and profile management.
   version: 1.0.0
+  contact:
+    name: Support Team
+    email: support@argentbank.com
+
 servers:
   - url: http://localhost:3001/api
     description: Local development server
@@ -22,8 +26,10 @@ paths:
               properties:
                 email:
                   type: string
+                  example: user@example.com
                 password:
                   type: string
+                  example: password123
               required:
                 - email
                 - password
@@ -37,8 +43,17 @@ paths:
                 properties:
                   token:
                     type: string
+                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
         '401':
           description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid email or password"
 
   /users/profile:
     get:
@@ -53,16 +68,37 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  id:
-                    type: string
-                  email:
-                    type: string
-                  name:
-                    type: string
+                $ref: '#/components/schemas/User'
         '401':
           description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Invalid or missing token"
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "User not found"
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Something went wrong"
 
 components:
   schemas:
@@ -71,10 +107,22 @@ components:
       properties:
         id:
           type: string
+          example: "12345abcde"
         email:
           type: string
+          example: user@example.com
         name:
           type: string
+          example: John Doe
+        createdAt:
+          type: string
+          format: date-time
+          example: "2023-08-23T18:25:43.511Z"
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2023-08-24T18:25:43.511Z"
+
   securitySchemes:
     bearerAuth:
       type: http
