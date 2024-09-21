@@ -1,14 +1,13 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../../assets/img/argentBankLogo.png';
-import { logout } from '../../redux/actions/auth.actions';
+import { logout } from '../../redux/slices/authSlice';
+import { useDispatch } from 'react-redux';
 
 function Header() {
-    const isConnected = useSelector((state) => state.auth.token);
-    const firstName = useSelector((state) => state.user?.userData?.firstName || 'User');
-
-    console.log('isConnected:', isConnected); 
-    console.log('firstName:', firstName); 
+    const isConnected = useSelector((state) => state.auth.isAuthenticated);
+    const firstName = useSelector((state) => state.auth.user?.firstName || 'User');
+    const lastName = useSelector((state) => state.auth.user?.lastName || '');
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -31,7 +30,7 @@ function Header() {
                     <div className="connected flex items-center">
                         <Link to='/profile' className='flex items-center'>
                             <i className='fa-solid fa-2x fa-circle-user' />
-                            <p className='ml-2'>{firstName}</p>
+                            <p className='ml-2'>{firstName} {lastName}</p>
                         </Link>
                         <Link to='/' onClick={logoutHandler} className='flex items-center ml-4'>
                             <i className='fa-solid fa-arrow-right-from-bracket' />
