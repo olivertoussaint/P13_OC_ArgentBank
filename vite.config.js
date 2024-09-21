@@ -35,19 +35,19 @@ export default defineConfig({
       },
       {
         find: '@home',
-        replacement: path.resolve(__dirname, 'src/pages/Home/index.jsx')
+        replacement: path.resolve(__dirname, 'src/containers/Home.jsx')
       },
       {
         find: '@login',
-        replacement: path.resolve(__dirname, 'src/pages/Login/index.jsx')
+        replacement: path.resolve(__dirname, 'src/containers/Login.jsx')
       },
       {
         find: '@profile',
-        replacement: path.resolve(__dirname, 'src/pages/Profile/index.jsx')
+        replacement: path.resolve(__dirname, 'src/containers/Profile.jsx')
       },
       {
         find: '@error',
-        replacement: path.resolve(__dirname, 'src/pages/Error/index.jsx')
+        replacement: path.resolve(__dirname, 'src/containers/Error.jsx')
       }
     ]
   }
