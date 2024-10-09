@@ -5,9 +5,8 @@ const handleApiError = (error) => {
   console.error("API Error:", error);
 
   if (error.response) {
-    const errorCode = error.response.status;
 
-    switch (errorCode) {
+    switch(error.response.status) {
       case 400:
         console.error("Invalid fields or bad request.");
         break;
@@ -20,10 +19,9 @@ const handleApiError = (error) => {
       default:
         console.error("An unexpected error occurred.");
     }
-    throw new Error(error.response.data.message || "An error occurred");
   } else {
     console.error("Network error or server is down.");
-    throw new Error("Network error or server is down");
+    throw error;
   }
 };
 
@@ -39,7 +37,7 @@ export const loginUser = async (email, password) => {
       user: response.data.body.user, // Si l'API retourne les informations utilisateur avec le token
     };
   } catch (error) {
-    return handleApiError(error); // Propagation de l'erreur
+     handleApiError(error); // Propagation de l'erreur
   }
 };
 
@@ -73,6 +71,7 @@ export const updateUserProfile = async (jwtToken, updatedProfile) => {
         },
       }
     );
+    console.log(response.data.body)
     return response.data.body; // Retourne directement les informations mises à jour
   } catch (error) {
     return handleApiError(error); // Propagation de l'erreur

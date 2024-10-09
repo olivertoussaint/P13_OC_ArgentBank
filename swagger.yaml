@@ -69,6 +69,16 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/User'
+                 examples:
+        userProfile:
+          value:
+            id: ObjectId('66b64fd303022158e49ec57b')
+            email: "steve@rogers.com"
+            firstName: ""
+            lastName: ""
+            createdAt: 2024-08-09T17:20:19.798+00:00
+            updatedAt: 2024-09-21T15:26:00.587+00:00
+            __v: 0
         '401':
           description: Unauthorized
           content:
@@ -117,11 +127,11 @@ components:
         createdAt:
           type: string
           format: date-time
-          example: "2023-08-23T18:25:43.511Z"
+          example: "2024-08-09T17:20:19.798+00:00"
         updatedAt:
           type: string
           format: date-time
-          example: "2023-08-24T18:25:43.511Z"
+          example: "2024-09-21T15:26:00.587+00:00"
 
   securitySchemes:
     bearerAuth:

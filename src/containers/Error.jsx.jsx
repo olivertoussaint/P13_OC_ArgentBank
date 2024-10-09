@@ -15,7 +15,7 @@ const Error = () => {
         <p className="mt-6 text-base leading-7 text-gray-600">
           The requested page doesn&apos;t exist...
         </p>
-        <p className="mt-6 text-base leading-7 text-gray-600">
+        <p className="mt-6 mb-6 text-base leading-7 text-gray-600">
           Please return to homepage
         </p>
         <Link to="/">

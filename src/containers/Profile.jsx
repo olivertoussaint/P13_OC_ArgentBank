@@ -11,8 +11,8 @@ const Profile = () => {
   const status = useSelector((state) => state.user.status);
   const token = useSelector((state) => state.auth.token);
 
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [firstName, setFirstName] = useState('Tony');
+  const [lastName, setLastName] = useState('Jarvis');
   const [editFirstName, setEditFirstName] = useState('');
   const [editLastName, setEditLastName] = useState('');
   const [isEditing, setIsEditing] = useState(false);
@@ -25,8 +25,8 @@ const Profile = () => {
 
   useEffect(() => {
     if (user) {
-      setFirstName(user.firstName || '');
-      setLastName(user.lastName || '');
+      setFirstName(user.firstName || 'Tony');
+      setLastName(user.lastName || 'Jarvis');
       setEditFirstName(user.firstName || '');
       setEditLastName(user.lastName || '');
     }
@@ -69,16 +69,16 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <main className="bg-dark min-h-150">
-        <h2 className="text-2 pt-6 text-white">
-          Welcome back! <br /> {firstName} {lastName}
+      <main className="bg-gray-200 dark:bg-dark min-h-150">
+        <h2 className="text-2 pt-6 dark:text-white">
+          Welcome back <br /> {firstName} {lastName}!
         </h2>
 
         <div className="profile-edit-section mt-6">
           {isEditing ? (
             <div className="edit-input flex flex-col gap-4">
               <div className="input-group">
-                <label htmlFor="firstName" className="block text-white mb-1">
+                <label htmlFor="firstName" className="block dark:text-white mb-1">
                   First Name:
                 </label>
                 <input
@@ -87,11 +87,11 @@ const Profile = () => {
                   id="firstName"
                   value={editFirstName}
                   onChange={handleFirstNameChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-regul-green"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
                 />
               </div>
               <div className="input-group">
-                <label htmlFor="lastName" className="block text-white mb-1">
+                <label htmlFor="lastName" className="block dark:text-white mb-1">
                   Last Name:
                 </label>
                 <input
@@ -100,19 +100,19 @@ const Profile = () => {
                   id="lastName"
                   value={editLastName}
                   onChange={handleLastNameChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-regul-green"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-300"
                 />
               </div>
               <div className="buttons flex gap-4 mt-4">
                 <button
                   onClick={handleSaveClick}
-                  className="bg-regul-green text-white px-4 py-2 rounded-md shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="border border-violet-500 bg-white text-violet-500 px-4 py-2 rounded-md shadow hover:text-violet-800 focus:outline-none focus:ring-2 focus:ring-violet-300"
                 >
                   Save
                 </button>
                 <button
                   onClick={handleCancelClick}
-                  className="bg-gray-400 text-white px-4 py-2 rounded-md shadow hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300"
+                  className="border border-violet-500 bg-white text-violet-500 px-4 py-2 rounded-md shadow hover:text-violet-800 focus:outline-none focus:ring-2 focus:ring-violet-300"
                 >
                   Cancel
                 </button>
@@ -122,7 +122,7 @@ const Profile = () => {
             <div className="display-info">
               <button
                 onClick={handleEditClick}
-                className="bg-regul-green p-2 mt-5 text-white rounded-md shadow hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="border border-violet-500 text-violet-500 p-2 mt-5 rounded-md shadow-lg shadow-violet-300/100 hover:shadow-lg hover:shadow-violet-400/90 focus:outline-none focus:ring-2 focus:ring-violet-300"
               >
                 Edit Name
               </button>

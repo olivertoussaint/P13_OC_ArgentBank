@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -14,6 +15,7 @@ export default {
         'login': '#2c3e50',
         'white': '#ffffff',
         'dark': 'rgb(18 0 43);',
+        aliceblue: '#F0F8FF',
       },
       minHeight: {
         '150': '820px'

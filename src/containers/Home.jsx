@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import React from "react";
 import Banner from "@banner"
 import Item from "../components/Item"
 import FeaturesItemData from "../data/FeaturesItemData.json"
@@ -17,10 +15,10 @@ function Home() {
 
   return (
     <>
-    <main>
+    <main className="dark:bg-gray-900 dark:text-white">
       <Banner />
       <div className="hero">
-        <section className="features">
+        <section className="features bg-white dark:bg-dark">
           <h2 className="sr-only">Features</h2>
           {FeaturesItemData.map((data) => (
             < Item

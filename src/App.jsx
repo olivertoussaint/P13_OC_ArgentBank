@@ -3,6 +3,7 @@ import Home from '@home'
 import Login from '@login'
 import Profile from '@profile'
 import Error from '@error'
+// import Transactions from './containers/Transactions';
 import './App.css'
 import Header from '@layout/Header'
 import Footer from '@layout/Footer'
@@ -20,6 +21,10 @@ function App() {
           path="/profile"
           element={<PrivateRoute element={<Profile />} />} 
         />
+        {/* <Route 
+            path="/transactions/:accountId" 
+            element={<PrivateRoute element={<Transactions />} />} 
+          /> */}
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -1,9 +1,6 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-
 const Footer = () => {
   return (
-    <footer>
+    <footer className=' bg-white text-gray-800 dark:bg-dark dark:text-white'>
         <p>Copyright 2020 Argent Bank</p>
     </footer>
   )

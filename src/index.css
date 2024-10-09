@@ -39,7 +39,7 @@
 
 .features {
 	display: flex;
-	margin-bottom: 0.625rem;
+	/* margin-bottom: 0.625rem; */
 	width: 100%;
     min-height: 410px
 }
@@ -59,10 +59,11 @@
 	border-radius: 50%;
 	padding: 1rem;
 	width: 9.375rem;
+	background-color: #fff
 }
 
 .feature-item-title {
-    color: #222;
+    /* color: #222; */
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: .5rem;
@@ -133,7 +134,7 @@ h2 {
 .account {
     align-items: center;
     background-color: #fff;
-    border: 1px solid #000;
+    border: 2px solid #c8bfbf;
     display: flex;
     justify-content: space-between;
     margin: 2rem auto;

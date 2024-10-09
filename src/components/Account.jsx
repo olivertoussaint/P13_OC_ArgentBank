@@ -1,26 +1,36 @@
-// eslint-disable-next-line no-unused-vars
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
-function Account({title, amount, description}) {
+function Account({ title, amount, description }) {
+  const navigate = useNavigate();
+
+  const handleViewTransactions = () => {
+    navigate(`/transactions/`);
+  };
+
   return (
-    <section className='account'>
-      <h2 className="sr-only">Accounts</h2>
+    <section className="account bg-white dark:text-white shadow-md rounded-lg p-6 mb-4 dark:bg-gray-800">
       <div className="account-content-wrapper">
-        <h3 className="account-title text-base-1 font-normal leading-3">{title}</h3>
-        <p className="account-amount text-2-5 font-bold text-login">{amount}</p>
-        <p className="account-amount-description leading-3">{description}</p>
+        <h3 className="account-title">{title}</h3>
+        <p className="account-amount">{amount}</p>
+        <p className="account-amount-description">{description}</p>
       </div>
-      <div className="account-content-wrapper">
-        <button className="transaction-button bg-regul-green text-white">View transactions</button>
+      <div className="account-content-wrapper mt-4">
+        <button 
+          onClick={handleViewTransactions} 
+          className="transaction-button bg-violet-500 text-white px-4 py-2 rounded-md shadow hover:bg-violet-600"
+        >
+          View transactions
+        </button>
       </div>
     </section>
-  )
+  );
 }
+
 Account.propTypes = {
   title: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-}
+};
 
-export default Account
+export default Account;

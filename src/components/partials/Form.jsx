@@ -40,7 +40,9 @@ function Form() {
     }
 
     const resultAction = await dispatch(login({ email, password }));
-
+    console.log(login.fulfilled)
+    console.log(login.fulfilled.match(resultAction))
+    console.log(resultAction)
     if (login.fulfilled.match(resultAction)) {
       const { token } = resultAction.payload;
 
@@ -54,7 +56,7 @@ function Form() {
   };
 
   return (
-    <section className="sign-in-content flex flex-col gap-5 w-73 p-8 bg-white m-auto">
+    <section className="sign-in-content shadow-lg flex flex-col gap-5 w-73 p-8 bg-white m-auto">
       <i className="fa-solid fa-circle-user text-1" />
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit} className="text-left">
@@ -66,6 +68,7 @@ function Form() {
             value={email}
             onChange={handleEmailChange}
             required
+            className="w-full px-4 py-2 border border-violet-300 text-gray-700 placeholder-violet-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition"
           />
         </div>
         <div className="input-wrapper">
@@ -76,6 +79,7 @@ function Form() {
             value={password}
             onChange={handlePasswordChange}
             required
+            className="w-full px-4 py-2 border border-violet-300 text-gray-700 placeholder-violet-400 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-violet-500 transition"
           />
         </div>
         <div className="input-remember">
@@ -87,7 +91,7 @@ function Form() {
           />
           <label htmlFor="remember-me">Remember me</label>
         </div>
-        <button type="submit" className="bg-regul-green mt-4 w-full block text-white text-1 p-.625rem font-bold hover:bg-lime-600 hover:text-black">
+        <button type="submit" className="border border-violet-300 mt-4 w-full block text-violet-600 text-1 p-.625rem font-bold hover:border-violet-600 hover:text-lg">
           Sign in
         </button>
         {status === 'failed' && (
