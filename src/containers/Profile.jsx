@@ -4,6 +4,7 @@ import { fetchUserProfile } from '../redux/slices/userSlice';
 import { updateProfile } from '../redux/slices/authSlice';
 import Account from '../components/Account';
 import AccountCardData from '../data/AccountCardData.json';
+import Spinner from '../components/Spinner';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -60,7 +61,7 @@ const Profile = () => {
   };
 
   if (status === 'loading') {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   if (status === 'failed') {
@@ -134,6 +135,7 @@ const Profile = () => {
           {AccountCardData.map((account) => (
             <Account
               key={account.id}
+              id={account.id}
               title={account.title}
               amount={account.amount}
               description={account.description}

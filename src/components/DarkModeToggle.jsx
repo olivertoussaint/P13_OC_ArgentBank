@@ -16,17 +16,18 @@ const DarkModeToggle = () => {
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   return (
-    <button
-      onClick={toggleDarkMode}
-      className="p-2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white"
-    >
-      {isDarkMode ? (
-        <FontAwesomeIcon icon={faSun} className='text-yellow-500' />
-      ) : (
-        <FontAwesomeIcon icon={faMoon} className='text-blue-500' />
-      )}
-      
-    </button>
+    <div className="flex justify-center items-center bg-white dark:bg-dark">
+      <button
+        onClick={toggleDarkMode}
+        className="w-10 h-10 flex items-center justify-center  text-black dark:text-white rounded-full transition-colors duration-300 hover:bg-gray-300 hover:text-white"
+      >
+        {isDarkMode ? (
+          <FontAwesomeIcon icon={faSun} className='text-yellow-500' />
+        ) : (
+          <FontAwesomeIcon icon={faMoon} className='text-blue-500' />
+        )}
+      </button>
+    </div>
   );
 };
 

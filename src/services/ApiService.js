@@ -1,12 +1,13 @@
 import axios from "axios";
 
+const apiUrl = import.meta.env.VITE_API_URL; 
+
 // Fonction pour gérer les erreurs API
 const handleApiError = (error) => {
   console.error("API Error:", error);
 
   if (error.response) {
-
-    switch(error.response.status) {
+    switch (error.response.status) {
       case 400:
         console.error("Invalid fields or bad request.");
         break;
@@ -29,7 +30,7 @@ const handleApiError = (error) => {
 export const loginUser = async (email, password) => {
   try {
     const response = await axios.post(
-      "http://localhost:3001/api/v1/user/login",
+      `${apiUrl}/v1/user/login`,
       { email, password }
     );
     return {
@@ -37,7 +38,7 @@ export const loginUser = async (email, password) => {
       user: response.data.body.user, // Si l'API retourne les informations utilisateur avec le token
     };
   } catch (error) {
-     handleApiError(error); // Propagation de l'erreur
+    handleApiError(error);
   }
 };
 
@@ -45,7 +46,7 @@ export const loginUser = async (email, password) => {
 export const getUserProfile = async (jwtToken) => {
   try {
     const response = await axios.post(
-      "http://localhost:3001/api/v1/user/profile",
+      `${apiUrl}/v1/user/profile`,
       {},
       {
         headers: {
@@ -53,9 +54,9 @@ export const getUserProfile = async (jwtToken) => {
         },
       }
     );
-    return response.data.body; // Retourne directement les informations utilisateur
+    return response.data.body;
   } catch (error) {
-    return handleApiError(error); // Propagation de l'erreur
+    return handleApiError(error);
   }
 };
 
@@ -63,7 +64,7 @@ export const getUserProfile = async (jwtToken) => {
 export const updateUserProfile = async (jwtToken, updatedProfile) => {
   try {
     const response = await axios.put(
-      "http://localhost:3001/api/v1/user/profile",
+      `${apiUrl}/v1/user/profile`,
       updatedProfile,
       {
         headers: {
@@ -71,9 +72,26 @@ export const updateUserProfile = async (jwtToken, updatedProfile) => {
         },
       }
     );
-    console.log(response.data.body)
-    return response.data.body; // Retourne directement les informations mises à jour
+    console.log(response.data.body);
+    return response.data.body;
   } catch (error) {
-    return handleApiError(error); // Propagation de l'erreur
+    return handleApiError(error);
+  }
+};
+
+// Fonction pour récupérer les transactions d'un compte utilisateur
+export const fetchTransactions = async (accountId, jwtToken) => {
+  try {
+    const response = await axios.get(
+      `${apiUrl}/v1/accounts/${accountId}/transactions`,
+      {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    return handleApiError(error);
   }
 };

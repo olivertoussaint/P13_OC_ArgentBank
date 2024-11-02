@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-function Account({ title, amount, description }) {
+function Account({ id, title, amount, description }) {
   const navigate = useNavigate();
 
   const handleViewTransactions = () => {
-    navigate(`/transactions/`);
+    navigate(`/transactions/${id}`);
   };
 
   return (
@@ -28,6 +28,7 @@ function Account({ title, amount, description }) {
 }
 
 Account.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   amount: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,

@@ -30,7 +30,8 @@ export const updateProfile = createAsyncThunk(
       const updatedUser = await updateUserProfile(token, { firstName, lastName });
       return updatedUser;
     } catch (error) {
-      return rejectWithValue(error.message);
+      //return rejectWithValue(error.message);
+      return rejectWithValue(error.response?.data?.message || error.message);
     }
   }
 );
@@ -43,6 +44,9 @@ const authSlice = createSlice({
       state.token = null;
       state.isAuthenticated = false;
       state.user = null;
+      // Supprimer le token du localStorage/sessionStorage
+  localStorage.removeItem('token');
+  sessionStorage.removeItem('token');
     },
   },
   extraReducers: (builder) => {
@@ -57,6 +61,9 @@ const authSlice = createSlice({
         state.user = action.payload.user;
         state.status = 'succeeded';
         state.error = null;
+
+        // Sauvegarder le token dans le localStorage pour maintenir l'authentification
+  localStorage.setItem('token', action.payload.token);
       })
       .addCase(login.rejected, (state, action) => {
         state.status = 'failed';

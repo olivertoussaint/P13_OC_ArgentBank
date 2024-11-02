@@ -15,9 +15,10 @@ export default {
         'login': '#2c3e50',
         'white': '#ffffff',
         'dark': 'rgb(18 0 43);',
-        aliceblue: '#F0F8FF',
+        'aliceblue': '#F0F8FF',
       },
       minHeight: {
+        '140': '750px',
         '150': '820px'
       },
       width: {
@@ -26,13 +27,15 @@ export default {
         '81': '22.75rem'
       },
       height: {
-        '97': '25rem'
+        '97': '25rem',
+    
       },
       margin: {
         'auto': '0 auto',
       },
       padding: {
-        '.625rem': '.625rem'
+        '.625rem': '.625rem',
+        '.14rem': '14rem',
       },
       fontSize: {
         'base-1': '1rem',

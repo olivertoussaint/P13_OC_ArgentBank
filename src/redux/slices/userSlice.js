@@ -6,7 +6,8 @@ export const fetchUserProfile = createAsyncThunk(
   async (token, { rejectWithValue }) => {
     try {
       const response = await getUserProfile(token);
-      return response; // Assurez-vous que cela retourne les données utilisateur
+      console.log(response)
+      return response; 
     } catch (error) {
       return rejectWithValue(error.message);
     }
