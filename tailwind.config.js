@@ -7,9 +7,6 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
-      backgroundImage: {
-        'bank-tree': "url('./src/assets/img/bank-tree.jpeg')"
-      },
       colors: {
         'regul-green': '#00bc77',
         'login': '#2c3e50',
@@ -19,12 +16,13 @@ export default {
       },
       minHeight: {
         '140': '750px',
-        '150': '820px'
+        '150': '820px',
+        '1020px': '1020px'
       },
       width: {
         '49': '12.5rem',
         '73': '18.75rem',
-        '81': '22.75rem'
+        '81': '22.75rem',
       },
       height: {
         '97': '25rem',
@@ -42,7 +40,15 @@ export default {
         '1': '1.1rem',
         '2': '2rem',
         '2-5': '2.5rem'
+      },
+      spacing: {
+        '3.125rem': '3.125rem',
+        '1.1875rem': '1.1875rem'
+      },
+      borderWidth: {
+        '10': '10px'
       }
+
     },
   },
   plugins: [],

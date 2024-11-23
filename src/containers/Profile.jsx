@@ -70,7 +70,7 @@ const Profile = () => {
 
   return (
     <div className="profile-container">
-      <main className="bg-gray-200 dark:bg-dark min-h-150">
+      <main className="bg-gray-200 dark:bg-dark min-h-1020px md:min-h-150">
         <h2 className="text-2 pt-6 dark:text-white">
           Welcome back <br /> {firstName} {lastName}!
         </h2>

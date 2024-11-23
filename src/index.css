@@ -3,199 +3,162 @@
 @tailwind utilities;
 
 @layer base {
-	h3 {
-		@apply text-lg;
-	  }
-}
-
-.heroContent {
-	background: #fff;
-	margin: 2rem;
-	padding: 2.5rem;
-	position: absolute;
-	right: 3.125rem;
-	text-align: left;
-	top: 3.125rem;
-	width: 22.75rem;
+  h3 {
+    @apply text-lg;
+  }
 }
 
 .subtitle {
-	font-size: 1.5rem;
-	font-weight: 700;
+  font-weight: 700;
 }
 .text {
-	font-size: 1.2rem;
-	margin-top: 1.1875rem;
-}
-
-.banner {
-	background-image: url(./src/assets/img/bank-tree.jpeg);
-	background-position: 0% 33%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 25rem;
-	position: relative;
+  margin-top: 1.1875rem;
 }
 
 .features {
-	display: flex;
-	/* margin-bottom: 0.625rem; */
-	width: 100%;
-    min-height: 410px
+  display: flex;
+  width: 100%;
+  min-height: 410px;
 }
 
 .feature-item {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	gap: 1.2rem;
-	margin: 0 auto;
-	padding: 2.5rem;
-	width: 33%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0 auto;
+  padding: 2.5rem;
+  width: 33%;
 }
 
 .feature-item-icon {
-	border: 10px solid #00bc77;
-	border-radius: 50%;
-	padding: 1rem;
-	width: 9.375rem;
-	background-color: #fff
+  border: 10px solid #00bc77;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 9.375rem;
+  background-color: #fff;
 }
 
 .feature-item-title {
-    /* color: #222; */
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 footer {
-	border-top: 2px solid #ccc;
-	display: flex;
-	justify-content: center;
-	padding: 2rem 0 1.5rem;
+  border-top: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 1.5rem;
 }
 
 h2 {
-	display: block;
-	font-size: 1.5rem;
-	font-weight: bold;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.sign-in-content form .input-wrapper label{
-	font-weight: 700;
+.sign-in-content form .input-wrapper label {
+  font-weight: 700;
 }
-
-/* .sign-in-button {
-	background-color: #00bc77;
-	border: none;
-	color: #fff;
-	cursor: pointer;
-	display: block;
-	font-size: 1.1rem;
-	font-weight: 700;
-	margin-top: 1rem;
-	padding: 0.5rem;
-	width: 100%;
-} */
 
 .input-remember {
-	display: flex;
-	margin-left: 0.25rem;
+  display: flex;
+  margin-left: 0.25rem;
 }
 
 .input-remember label {
-	margin-left: 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .input-wrapper input {
-	font-size: 1.2rem;
-	padding: 0.3125rem;
-	border-color: rgb(118, 118, 118);
-	border-width: 0.5px;
-	width: 100%;
+  font-size: 1.2rem;
+  padding: 0.3125rem;
+  border-color: rgb(118, 118, 118);
+  border-width: 0.5px;
+  width: 100%;
 }
 
 .error-message {
-	color: red;
-	font-size: 1.1rem;
-	font-weight: 700;
-	margin-top: 25px;
-	text-align: center;
+  color: red;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .account {
-    align-items: center;
-    background-color: #fff;
-    border: 2px solid #c8bfbf;
-    display: flex;
-    justify-content: space-between;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    text-align: left;
-    width: 82%;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #c8bfbf;
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: left;
+  width: 82%;
+  margin-bottom: 0;
 }
 
 .edit-input {
-	align-items: center;
-    display: flex;
-    gap: 7px;
-    justify-content: center;
-    margin-top: 20px;
+  align-items: center;
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .edit-input :disabled {
-    background-color: #c9c9c9;
-    color: #505050;
+  background-color: #c9c9c9;
+  color: #505050;
 }
 
 .edit-input input {
-	height: 25px;
-    padding-left: 3px;
-	color: #2c3e50;
-	width: 110px
+  height: 25px;
+  padding-left: 3px;
+  color: #2c3e50;
+  width: 110px;
 }
 
 .buttons {
-	display: flex;
-    gap: 5px;
-    justify-content: center;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
 }
 
 .edit-username-button {
-	border-radius: 2px;
-    color: #fff;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    padding: .625rem;
-    width: 120px;
+  border-radius: 2px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  padding: 0.625rem;
+  width: 120px;
 }
 
 .transaction-button {
-	border-radius: 10px;
-	display: block;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-top: 1rem;
-    padding: .5rem;
-	width: 15rem;
-	cursor: auto;
+  border-radius: 10px;
+  display: block;
+  font-weight: 700;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 10rem;
+  cursor: auto;
 }
-.modal-content {
-	max-height: 80vh;
-	overflow-y: auto;
-  }
+
 @keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
   }
-  
-  .loading-circle {
-	border: 4px solid #f3f3f3; 
-	border-top: 4px solid #22c55e;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	animation: spin 1s linear infinite;
+  100% {
+    transform: rotate(360deg);
   }
-  
+}
+
+.loading-circle {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #22c55e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
